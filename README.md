@@ -57,7 +57,7 @@ The current Ed25519 public key (hex):
 ```
 
 This must match the `PUBLIC_KEY` constant baked into the app binary at
-[`src-tauri/src/data_pack_update.rs`](https://github.com/dnc4104>/privateprompt/blob/main/src-tauri/src/data_pack_update.rs).
+[`src-tauri/src/data_pack_update.rs`](https://github.com/dnc4104/privateprompt/blob/main/src-tauri/src/data_pack_update.rs).
 Mismatch → all updates from this repo are rejected (by design, to protect
 against attacker-controlled keys).
 
