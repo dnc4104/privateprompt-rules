@@ -20,7 +20,9 @@ on:
   push:
     tags:
       - 'data-pack-v*'
-
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  
 permissions:
   contents: write   # needed to create the release + upload assets
 
