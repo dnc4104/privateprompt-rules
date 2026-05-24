@@ -1,0 +1,324 @@
+schema_version: 1
+locale: fr
+patterns:
+  NIR_RE: \b[12]\s?\d{2}\s?\d{2}\s?(?:\d{2}|2A|2B)\s?\d{3}\s?\d{3}[\s./]*\d{2}\b
+  SIREN_RE: \b\d{3}\s?\d{3}\s?\d{3}\b
+  SIRET_RE: \b\d{3}\s?\d{3}\s?\d{3}\s?\d{5}\b
+  TVA_FR_RE: \bFR\s?[A-HJ-NP-Z0-9]{2}\s?\d{3}\s?\d{3}\s?\d{3}\b
+  FR_PHONE_RE: (?:\+33|0033)[\s.-]?[1-9](?:[\s.-]?\d{2}){4}|\b0[1-9](?:[\s.-]?\d{2}){4}\b
+  RG_RE: \bRG\s+\d{2}/\d{4,6}\b
+  POURVOI_RE: \b\d{2}-\d{2}\.\d{3}\b
+  RCS_RE: \b\d{3}\s\d{3}\s\d{3}\b
+  BIC_RE: \b[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}(?:[A-Z0-9]{3})?\b
+  IBAN_RE: \b[A-Z]{2}\d{2}(?:\s?[A-Z0-9]{4}){2,7}\s?[A-Z0-9]{1,4}\b
+  TOQUE_RE: \b[Tt]oque\s*:?\s*[A-Z]\d{3,5}\b
+  PRO_REG_RE: \b\d{2}-\d{4,5}\b
+  FR_CNI_RE: \b(?=[A-Z0-9]*\d)[A-Z0-9]{9}\b
+  FR_PASSPORT_RE: \b\d{2}[A-Z]{2}\d{5}\b
+  FR_POSTAL_CITY_RE: \b\d{5}\s+[A-ZÀ-Ÿ][\wÀ-ÿ\-]+(?:[ \-][A-ZÀ-Ÿ][\wÀ-ÿ\-]+)*\b
+  FRENCH_PLACES_RE: \b(?:Paris|Lyon|Marseille|Toulouse|Nice|Nantes|Strasbourg|Montpellier|Bordeaux|Lille|Rennes|Reims|Le\ Havre|Saint\-Étienne|Saint\-Etienne|Toulon|Grenoble|Dijon|Angers|Nîmes|Nimes|Villeurbanne|Le\ Mans|Aix\-en\-Provence|Brest|Tours|Amiens|Limoges|Annecy|Perpignan|Besançon|Besancon|Orléans|Orleans|Metz|Rouen|Mulhouse|Caen|Nancy|Argenteuil|Saint\-Denis|Roubaix|Tourcoing|Nanterre|Avignon|Vitry\-sur\-Seine|Créteil|Creteil|Dunkerque|Poitiers|Asnières\-sur\-Seine|Versailles|Colombes|Aulnay\-sous\-Bois|Saint\-Pierre|Saint\-Paul|Pau|La\ Rochelle|Calais|Cannes|Antibes|Boulogne\-Billancourt|Courbevoie|Rueil\-Malmaison|Champigny\-sur\-Marne|Béziers|Beziers|Issy\-les\-Moulineaux|Levallois\-Perret|Noisy\-le\-Grand|Cergy|Sarcelles|Évry\-Courcouronnes|Pessac|Ivry\-sur\-Seine|Quimper|Clichy|Antony|Niort|Sartrouville|Lorient|Chambéry|Chambery|Maisons\-Alfort|Beauvais|Villejuif|Cholet|Vannes|La\ Seyne\-sur\-Mer|Hyères|Hyeres|Bourges|Drancy|Mérignac|Bayonne|Saint\-Quentin|Albi|Évreux|Evreux|Cherbourg\-en\-Cotentin|Salon\-de\-Provence|Calvi|Ajaccio|Bastia|Île\-de\-France|Ile\-de\-France|Auvergne\-Rhône\-Alpes|Auvergne\-Rhone\-Alpes|Hauts\-de\-France|Provence\-Alpes\-Côte\
+    d'Azur|Grand\ Est|Occitanie|Nouvelle\-Aquitaine|Pays\ de\ la\ Loire|Bretagne|Normandie|Bourgogne\-Franche\-Comté|Centre\-Val\ de\ Loire|Corse|Guadeloupe|Martinique|Guyane|Réunion|Reunion|Mayotte)\b
+places:
+- Paris
+- Lyon
+- Marseille
+- Toulouse
+- Nice
+- Nantes
+- Strasbourg
+- Montpellier
+- Bordeaux
+- Lille
+- Rennes
+- Reims
+- Le Havre
+- Saint-Étienne
+- Saint-Etienne
+- Toulon
+- Grenoble
+- Dijon
+- Angers
+- Nîmes
+- Nimes
+- Villeurbanne
+- Le Mans
+- Aix-en-Provence
+- Brest
+- Tours
+- Amiens
+- Limoges
+- Annecy
+- Perpignan
+- Besançon
+- Besancon
+- Orléans
+- Orleans
+- Metz
+- Rouen
+- Mulhouse
+- Caen
+- Nancy
+- Argenteuil
+- Saint-Denis
+- Roubaix
+- Tourcoing
+- Nanterre
+- Avignon
+- Vitry-sur-Seine
+- Créteil
+- Creteil
+- Dunkerque
+- Poitiers
+- Asnières-sur-Seine
+- Versailles
+- Colombes
+- Aulnay-sous-Bois
+- Saint-Pierre
+- Saint-Paul
+- Pau
+- La Rochelle
+- Calais
+- Cannes
+- Antibes
+- Boulogne-Billancourt
+- Courbevoie
+- Rueil-Malmaison
+- Champigny-sur-Marne
+- Béziers
+- Beziers
+- Issy-les-Moulineaux
+- Levallois-Perret
+- Noisy-le-Grand
+- Cergy
+- Sarcelles
+- Évry-Courcouronnes
+- Pessac
+- Ivry-sur-Seine
+- Quimper
+- Clichy
+- Antony
+- Niort
+- Sartrouville
+- Lorient
+- Chambéry
+- Chambery
+- Maisons-Alfort
+- Beauvais
+- Villejuif
+- Cholet
+- Vannes
+- La Seyne-sur-Mer
+- Hyères
+- Hyeres
+- Bourges
+- Drancy
+- Mérignac
+- Bayonne
+- Saint-Quentin
+- Albi
+- Évreux
+- Evreux
+- Cherbourg-en-Cotentin
+- Salon-de-Provence
+- Calvi
+- Ajaccio
+- Bastia
+- Île-de-France
+- Ile-de-France
+- Auvergne-Rhône-Alpes
+- Auvergne-Rhone-Alpes
+- Hauts-de-France
+- Provence-Alpes-Côte d'Azur
+- Grand Est
+- Occitanie
+- Nouvelle-Aquitaine
+- Pays de la Loire
+- Bretagne
+- Normandie
+- Bourgogne-Franche-Comté
+- Centre-Val de Loire
+- Corse
+- Guadeloupe
+- Martinique
+- Guyane
+- Réunion
+- Reunion
+- Mayotte
+recognizers:
+- entity: NIR_FR
+  languages:
+  - fr
+  - de
+  pattern_name: nir
+  regex_ref: NIR_RE
+  score: 0.85
+  context:
+  - INSEE
+  - sécurité sociale
+  - securite sociale
+  - NIR
+  - n°
+- entity: SIREN_FR
+  languages:
+  - fr
+  - de
+  pattern_name: siren
+  regex_ref: SIREN_RE
+  score: 0.4
+  context:
+  - SIREN
+  - siren
+  - n° SIREN
+  - Registre du commerce
+  - RCS
+- entity: SIRET_FR
+  languages:
+  - fr
+  - de
+  pattern_name: siret
+  regex_ref: SIRET_RE
+  score: 0.5
+  context:
+  - SIRET
+  - siret
+  - n° SIRET
+  - établissement
+  - etablissement
+- entity: TVA_FR
+  languages:
+  - fr
+  - de
+  pattern_name: tva_fr
+  regex_ref: TVA_FR_RE
+  score: 0.85
+  context:
+  - TVA
+  - intracommunautaire
+  - n° TVA
+- entity: PHONE_NUMBER
+  languages:
+  - fr
+  - de
+  pattern_name: fr_phone
+  regex_ref: FR_PHONE_RE
+  score: 0.7
+  context:
+  - tél
+  - tel
+  - phone
+  - téléphone
+  - Telefon
+- entity: CNI_FR
+  languages:
+  - fr
+  - de
+  pattern_name: fr_cni
+  regex_ref: FR_CNI_RE
+  score: 0.3
+  context:
+  - CNI
+  - carte d'identité
+  - carte nationale d'identité
+  - n° carte
+- entity: FR_PASSPORT
+  languages:
+  - fr
+  - de
+  pattern_name: fr_passport
+  regex_ref: FR_PASSPORT_RE
+  score: 0.5
+  context:
+  - passeport
+  - passport
+  - n° passeport
+- entity: CASE_REFERENCE
+  languages:
+  - fr
+  - de
+  pattern_name: rg
+  regex_ref: RG_RE
+  score: 0.9
+  context:
+  - RG
+  - Tribunal
+  - Cour
+  - chambre
+  - audience
+- entity: CASE_REFERENCE
+  languages:
+  - fr
+  - de
+  pattern_name: pourvoi
+  regex_ref: POURVOI_RE
+  score: 0.5
+  context:
+  - pourvoi
+  - Cassation
+  - Cass.
+  - arrêt
+- entity: RCS_FR
+  languages:
+  - fr
+  - de
+  pattern_name: rcs
+  regex_ref: RCS_RE
+  score: 0.4
+  context:
+  - RCS
+  - Registre du commerce
+  - immatriculée
+  - immatricule
+  - inscrite
+  - inscrit
+  - numéro
+- entity: BIC
+  languages:
+  - fr
+  - de
+  pattern_name: bic
+  regex_ref: BIC_RE
+  score: 0.4
+  context:
+  - BIC
+  - SWIFT
+  - code BIC
+  - code SWIFT
+  - IBAN
+  - banque
+- entity: TOQUE
+  languages:
+  - fr
+  - de
+  pattern_name: toque
+  regex_ref: TOQUE_RE
+  score: 0.9
+  context:
+  - Toque
+  - Barreau
+- entity: PRO_REG_FR
+  languages:
+  - fr
+  - de
+  pattern_name: pro_reg
+  regex_ref: PRO_REG_RE
+  score: 0.4
+  context:
+  - inscrit
+  - inscrite
+  - Ordre des
+  - sous le n°
+  - n° d'inscription
+  - registre
+  - immatriculation
+- entity: IBAN_CODE
+  languages:
+  - fr
+  - de
+  pattern_name: iban_intl
+  regex_ref: IBAN_RE
+  score: 0.85
+  context:
+  - IBAN
+  - compte
+  - banque
+  - BIC

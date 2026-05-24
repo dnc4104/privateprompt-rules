@@ -1,0 +1,63 @@
+schema_version: 1
+fr_months:
+  janvier: janvier
+  février: février
+  fevrier: février
+  mars: mars
+  avril: avril
+  mai: mai
+  juin: juin
+  juillet: juillet
+  août: août
+  aout: août
+  septembre: septembre
+  octobre: octobre
+  novembre: novembre
+  décembre: décembre
+  decembre: décembre
+de_months:
+  januar: Januar
+  februar: Februar
+  märz: März
+  maerz: März
+  april: April
+  mai: Mai
+  juni: Juni
+  juli: Juli
+  august: August
+  september: September
+  oktober: Oktober
+  november: November
+  dezember: Dezember
+numeric_fr:
+  '1': janvier
+  '2': février
+  '3': mars
+  '4': avril
+  '5': mai
+  '6': juin
+  '7': juillet
+  '8': août
+  '9': septembre
+  '10': octobre
+  '11': novembre
+  '12': décembre
+numeric_de:
+  '1': Januar
+  '2': Februar
+  '3': März
+  '4': April
+  '5': Mai
+  '6': Juni
+  '7': Juli
+  '8': August
+  '9': September
+  '10': Oktober
+  '11': November
+  '12': Dezember
+patterns:
+  NL_DATE_RE:
+    pattern: \b\d{1,2}(?:er|\.)?\s+([A-Za-zÀ-ÿ]+)\s+(\d{4})\b
+    flags:
+    - IGNORECASE
+  NUMERIC_DATE_RE: \b(\d{1,2})[./-](\d{1,2})[./-](\d{2,4})\b

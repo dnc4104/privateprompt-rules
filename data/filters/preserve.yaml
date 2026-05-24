@@ -1,0 +1,401 @@
+schema_version: 1
+preserve_phrases:
+- Registre du commerce
+- Handelsregister
+- Chambre fiduciaire
+- Treuhand-Kammer
+- Tribunal civil
+- Tribunal pénal
+- Tribunal administratif
+- Tribunal cantonal
+- Tribunal fédéral
+- Tribunal de première instance
+- Bundesgericht
+- Kantonsgericht
+- Obergericht
+- Cour de justice
+- Cour suprême
+- Conseil fédéral
+- Conseil d'État
+- Conseil national
+- Bundesrat
+- Ständerat
+- Office fédéral
+- Bundesamt
+- Service cantonal
+- Préfecture
+- Cour de cassation
+- Conseil constitutionnel
+- Cour d'appel
+- Tribunal judiciaire
+- Tribunal de commerce
+- Tribunal correctionnel
+- Tribunal de police
+- Tribunal des prud'hommes
+- Conseil de prud'hommes
+- Cour d'assises
+- Conseil d'État
+- Tribunal administratif
+- République française
+- Assemblée nationale
+- Sénat
+- Procureur de la République
+- Greffe
+- Parquet
+- Direction générale des finances publiques
+- DGFiP
+- URSSAF
+- INSEE
+- INPI
+- Code des obligations
+- Code civil
+- Code pénal
+- Loi fédérale
+- Bundesgesetz
+- LAMal
+- LAA
+- LPP
+- LAI
+- LPGA
+- LP
+- LDIP
+- AHV-Gesetz
+- AVS
+- OR
+- ZGB
+- StGB
+- Code du travail
+- Code de commerce
+- Code de la consommation
+- Code de procédure civile
+- Code de procédure pénale
+- Code général des impôts
+- Code de la santé publique
+- Code de la sécurité sociale
+- Code de l'urbanisme
+- Code de la route
+- Code monétaire et financier
+- Code de la propriété intellectuelle
+- Code de l'environnement
+- Code de procédure administrative
+- Code de l'éducation
+- Code de la famille
+- RGPD
+- CNIL
+- Pôle emploi
+- France Travail
+- CARPA
+- Comité social et économique
+- comité d'entreprise
+- CSE
+- URSSAF
+- CPAM
+- CAF
+- MSA
+- Cnam
+- Caisse primaire d'assurance maladie
+- Caisse d'allocations familiales
+- Caisse nationale d'assurance maladie
+- DREETS
+- DIRECCTE
+- Inspection du travail
+- Médecine du travail
+- Ordre des avocats
+- Ordre des médecins
+- Ordre des experts-comptables
+- Ordre des notaires
+- Conseil National des Barreaux
+- CNB
+- Compagnie nationale des commissaires aux comptes
+- Chambre des notaires
+- Chambre nationale des huissiers
+- Sécurité sociale
+- Conseil de prud'hommes
+- Médiateur de la République
+- Défenseur des droits
+- Autorité des marchés financiers
+- AMF
+- Autorité de contrôle prudentiel
+- ACPR
+- État de frais
+- État des lieux
+- État récapitulatif
+- État civil
+- Procès-verbal de carence
+- Procès-verbal de saisie
+- Convention collective
+- Convention d'honoraires
+- Lettre recommandée
+- Lettre de licenciement
+- Bordereau de pièces
+fr_departments:
+- Ain
+- Aisne
+- Allier
+- Alpes-de-Haute-Provence
+- Hautes-Alpes
+- Alpes-Maritimes
+- Ardèche
+- Ardennes
+- Ariège
+- Aube
+- Aude
+- Aveyron
+- Bouches-du-Rhône
+- Calvados
+- Cantal
+- Charente
+- Charente-Maritime
+- Cher
+- Corrèze
+- Corse-du-Sud
+- Haute-Corse
+- Côte-d'Or
+- Côtes-d'Armor
+- Creuse
+- Dordogne
+- Doubs
+- Drôme
+- Eure
+- Eure-et-Loir
+- Finistère
+- Gard
+- Haute-Garonne
+- Gers
+- Gironde
+- Hérault
+- Ille-et-Vilaine
+- Indre
+- Indre-et-Loire
+- Isère
+- Jura
+- Landes
+- Loir-et-Cher
+- Loire
+- Haute-Loire
+- Loire-Atlantique
+- Loiret
+- Lot
+- Lot-et-Garonne
+- Lozère
+- Maine-et-Loire
+- Manche
+- Marne
+- Haute-Marne
+- Mayenne
+- Meurthe-et-Moselle
+- Meuse
+- Morbihan
+- Moselle
+- Nièvre
+- Nord
+- Oise
+- Orne
+- Pas-de-Calais
+- Puy-de-Dôme
+- Pyrénées-Atlantiques
+- Hautes-Pyrénées
+- Pyrénées-Orientales
+- Bas-Rhin
+- Haut-Rhin
+- Rhône
+- Haute-Saône
+- Saône-et-Loire
+- Sarthe
+- Savoie
+- Haute-Savoie
+- Paris
+- Seine-Maritime
+- Seine-et-Marne
+- Yvelines
+- Deux-Sèvres
+- Somme
+- Tarn
+- Tarn-et-Garonne
+- Var
+- Vaucluse
+- Vendée
+- Vienne
+- Haute-Vienne
+- Vosges
+- Yonne
+- Territoire de Belfort
+- Essonne
+- Hauts-de-Seine
+- Seine-Saint-Denis
+- Val-de-Marne
+- Val-d'Oise
+- Guadeloupe
+- Martinique
+- Guyane
+- La Réunion
+- Réunion
+- Mayotte
+cantons_and_cities:
+- Genève
+- Geneve
+- Vaud
+- Valais
+- Fribourg
+- Neuchâtel
+- Neuchatel
+- Jura
+- Berne
+- Bern
+- Bâle-Ville
+- Basel-Stadt
+- Bâle-Campagne
+- Basel-Landschaft
+- Soleure
+- Solothurn
+- Argovie
+- Aargau
+- Lucerne
+- Luzern
+- Zoug
+- Zug
+- Schwytz
+- Schwyz
+- Uri
+- Glaris
+- Glarus
+- Tessin
+- Ticino
+- Grisons
+- Graubünden
+- Saint-Gall
+- St-Gall
+- St. Gallen
+- Schaffhouse
+- Schaffhausen
+- Thurgovie
+- Thurgau
+- Appenzell
+- Obwald
+- Obwalden
+- Nidwald
+- Nidwalden
+- Zürich
+- Zurich
+- Lausanne
+- Bâle
+- Basel
+- Lugano
+- Sion
+- Bienne
+- Biel
+- Coire
+- Chur
+- Aarau
+- Bellinzone
+- Bellinzona
+- Winterthour
+- Winterthur
+- Paris
+- Lyon
+- Marseille
+- Toulouse
+- Nice
+- Nantes
+- Strasbourg
+- Montpellier
+- Bordeaux
+- Lille
+- Rennes
+- Reims
+- Le Havre
+- Saint-Étienne
+- Saint-Etienne
+- Toulon
+- Grenoble
+- Dijon
+- Angers
+- Nîmes
+- Nimes
+- Le Mans
+- Aix-en-Provence
+- Brest
+- Tours
+- Amiens
+- Limoges
+- Annecy
+- Perpignan
+- Besançon
+- Besancon
+- Orléans
+- Orleans
+- Metz
+- Rouen
+- Mulhouse
+- Caen
+- Nancy
+- Versailles
+- Avignon
+- Poitiers
+- Cannes
+- Antibes
+- Pau
+- La Rochelle
+- Calais
+- Bayonne
+- Ajaccio
+- Bastia
+- Cayenne
+- Fort-de-France
+- Île-de-France
+- Ile-de-France
+- Auvergne-Rhône-Alpes
+- Hauts-de-France
+- Provence-Alpes-Côte d'Azur
+- Grand Est
+- Occitanie
+- Nouvelle-Aquitaine
+- Pays de la Loire
+- Bretagne
+- Normandie
+- Bourgogne-Franche-Comté
+- Centre-Val de Loire
+- Corse
+- Guadeloupe
+- Martinique
+- Guyane
+- Réunion
+- Reunion
+- Mayotte
+patterns:
+  DEPARTMENTS_RE: \b(?:Ain|Aisne|Allier|Alpes\-de\-Haute\-Provence|Hautes\-Alpes|Alpes\-Maritimes|Ardèche|Ardennes|Ariège|Aube|Aude|Aveyron|Bouches\-du\-Rhône|Calvados|Cantal|Charente|Charente\-Maritime|Cher|Corrèze|Corse\-du\-Sud|Haute\-Corse|Côte\-d'Or|Côtes\-d'Armor|Creuse|Dordogne|Doubs|Drôme|Eure|Eure\-et\-Loir|Finistère|Gard|Haute\-Garonne|Gers|Gironde|Hérault|Ille\-et\-Vilaine|Indre|Indre\-et\-Loire|Isère|Jura|Landes|Loir\-et\-Cher|Loire|Haute\-Loire|Loire\-Atlantique|Loiret|Lot|Lot\-et\-Garonne|Lozère|Maine\-et\-Loire|Manche|Marne|Haute\-Marne|Mayenne|Meurthe\-et\-Moselle|Meuse|Morbihan|Moselle|Nièvre|Nord|Oise|Orne|Pas\-de\-Calais|Puy\-de\-Dôme|Pyrénées\-Atlantiques|Hautes\-Pyrénées|Pyrénées\-Orientales|Bas\-Rhin|Haut\-Rhin|Rhône|Haute\-Saône|Saône\-et\-Loire|Sarthe|Savoie|Haute\-Savoie|Paris|Seine\-Maritime|Seine\-et\-Marne|Yvelines|Deux\-Sèvres|Somme|Tarn|Tarn\-et\-Garonne|Var|Vaucluse|Vendée|Vienne|Haute\-Vienne|Vosges|Yonne|Territoire\ de\ Belfort|Essonne|Hauts\-de\-Seine|Seine\-Saint\-Denis|Val\-de\-Marne|Val\-d'Oise|Guadeloupe|Martinique|Guyane|La\
+    Réunion|Réunion|Mayotte)\b
+  PRIVATE_PLACE_CONTEXT_RE:
+    pattern: \b(?:n[ée]e?|naissance|domicili[ée]e?|demeurant|r[ée]sidant|habitant|sis|sise|originaire)\b[^.,;:\n]{0,80}|\b(?:Date|Fait|[ÉE]tabli|Sign[ée])\s*[:à]?\s+[A-ZÀ-Ÿ][\wÀ-ÿ\-’ ]{1,40}
+    flags:
+    - IGNORECASE
+  INSTITUTION_PREFIX_RE: \b(?:Ordre\s+des\s+(?:avocats|m[ée]decins|notaires|experts?[\s-]comptables?|architectes|commissaires?\s+aux\s+comptes|huissiers|p[ée]diatres|chirurgiens)(?:\s+(?:de|du|d['’])[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+(?:[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+){0,3})?|Barreau\s+(?:de|du|d['’])[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+(?:[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+){0,3}|Conseil\s+(?:de\s+prud['’]hommes|sup[ée]rieur\s+de\s+la\s+magistrature|national\s+des\s+barreaux|d['’]?[ée]tat|constitutionnel|municipal|d[ée]partemental|r[ée]gional)(?:\s+(?:de|du|d['’])[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+(?:[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+){0,3})?|Pr[ée]fecture\s+(?:de|du|d['’])[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+(?:[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+){0,3}|Cour\s+(?:d['’]appel|de\s+cassation|administrative|d['’]assises)(?:\s+(?:de|du|d['’])[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+(?:[ \t]+[A-ZÀ-Ÿ][\wÀ-ÿ\-’]+){0,3})?)\b
+  CITIES_BARE_RE: \b(?:Genève|Geneve|Vaud|Valais|Fribourg|Neuchâtel|Neuchatel|Jura|Berne|Bern|Bâle\-Ville|Basel\-Stadt|Bâle\-Campagne|Basel\-Landschaft|Soleure|Solothurn|Argovie|Aargau|Lucerne|Luzern|Zoug|Zug|Schwytz|Schwyz|Uri|Glaris|Glarus|Tessin|Ticino|Grisons|Graubünden|Saint\-Gall|St\-Gall|St\.\ Gallen|Schaffhouse|Schaffhausen|Thurgovie|Thurgau|Appenzell|Obwald|Obwalden|Nidwald|Nidwalden|Zürich|Zurich|Lausanne|Bâle|Basel|Lugano|Sion|Bienne|Biel|Coire|Chur|Aarau|Bellinzone|Bellinzona|Winterthour|Winterthur|Paris|Lyon|Marseille|Toulouse|Nice|Nantes|Strasbourg|Montpellier|Bordeaux|Lille|Rennes|Reims|Le\ Havre|Saint\-Étienne|Saint\-Etienne|Toulon|Grenoble|Dijon|Angers|Nîmes|Nimes|Le\ Mans|Aix\-en\-Provence|Brest|Tours|Amiens|Limoges|Annecy|Perpignan|Besançon|Besancon|Orléans|Orleans|Metz|Rouen|Mulhouse|Caen|Nancy|Versailles|Avignon|Poitiers|Cannes|Antibes|Pau|La\ Rochelle|Calais|Bayonne|Ajaccio|Bastia|Cayenne|Fort\-de\-France|Île\-de\-France|Ile\-de\-France|Auvergne\-Rhône\-Alpes|Hauts\-de\-France|Provence\-Alpes\-Côte\
+    d'Azur|Grand\ Est|Occitanie|Nouvelle\-Aquitaine|Pays\ de\ la\ Loire|Bretagne|Normandie|Bourgogne\-Franche\-Comté|Centre\-Val\ de\ Loire|Corse|Guadeloupe|Martinique|Guyane|Réunion|Reunion|Mayotte)\b
+  JURISDICTIONAL_RE:
+    pattern: \b(?:canton\s+de\s+|Tribunal\s+(?:civil|cantonal|p[ée]nal|administratif|judiciaire|de\s+commerce|correctionnel|de\s+police|des\s+prud['’]hommes|de\s+premi[èe]re\s+instance|de\s+grande\s+instance)\s+(?:du\s+canton\s+de\s+|de\s+|d['’])?|Cour\s+(?:d['’]appel|de\s+cassation|de\s+justice|d['’]assises|administrative)\s+(?:de\s+|d['’])?|si[èe]ge\s+(?:social\s+)?(?:est\s+)?(?:à|en)\s+|barreau\s+de\s+|Bar(?:e?au)\s+de\s+|Pr[ée]fecture\s+(?:de\s+|d['’])?)(?:Genève|Geneve|Vaud|Valais|Fribourg|Neuchâtel|Neuchatel|Jura|Berne|Bern|Bâle\-Ville|Basel\-Stadt|Bâle\-Campagne|Basel\-Landschaft|Soleure|Solothurn|Argovie|Aargau|Lucerne|Luzern|Zoug|Zug|Schwytz|Schwyz|Uri|Glaris|Glarus|Tessin|Ticino|Grisons|Graubünden|Saint\-Gall|St\-Gall|St\.\ Gallen|Schaffhouse|Schaffhausen|Thurgovie|Thurgau|Appenzell|Obwald|Obwalden|Nidwald|Nidwalden|Zürich|Zurich|Lausanne|Bâle|Basel|Lugano|Sion|Bienne|Biel|Coire|Chur|Aarau|Bellinzone|Bellinzona|Winterthour|Winterthur|Paris|Lyon|Marseille|Toulouse|Nice|Nantes|Strasbourg|Montpellier|Bordeaux|Lille|Rennes|Reims|Le\
+      Havre|Saint\-Étienne|Saint\-Etienne|Toulon|Grenoble|Dijon|Angers|Nîmes|Nimes|Le\ Mans|Aix\-en\-Provence|Brest|Tours|Amiens|Limoges|Annecy|Perpignan|Besançon|Besancon|Orléans|Orleans|Metz|Rouen|Mulhouse|Caen|Nancy|Versailles|Avignon|Poitiers|Cannes|Antibes|Pau|La\ Rochelle|Calais|Bayonne|Ajaccio|Bastia|Cayenne|Fort\-de\-France|Île\-de\-France|Ile\-de\-France|Auvergne\-Rhône\-Alpes|Hauts\-de\-France|Provence\-Alpes\-Côte\ d'Azur|Grand\ Est|Occitanie|Nouvelle\-Aquitaine|Pays\ de\ la\ Loire|Bretagne|Normandie|Bourgogne\-Franche\-Comté|Centre\-Val\ de\ Loire|Corse|Guadeloupe|Martinique|Guyane|Réunion|Reunion|Mayotte)\b
+    flags:
+    - IGNORECASE
+preserve_patterns:
+- \b[Aa]rt(?:icle|\.)\s*[LR]?\.?\s*\d+[a-z]?(?:-\d+)?(?:\s+al\.\s*\d+)?\s+(?:CO|CC|CP|CCom|CPC|CPP|OR|ZGB|StGB|LAMal|LAA|LPP|LPGA|LP|CSP|CSS)\b
+- \b[Aa]rt(?:icle|\.)\s*[LR]?\.?\s*\d+[a-z]?(?:-\d+)?(?:\s+al\.\s*\d+)?\s+(?:du|de\s+la|de\s+l['’])\s*(?:Code\s+(?:des\s+obligations|civil|p[ée]nal|du\s+travail|de\s+commerce|de\s+la\s+consommation|de\s+proc[ée]dure\s+(?:civile|p[ée]nale)|g[ée]n[ée]ral\s+des\s+imp[ôo]ts|de\s+la\s+sant[ée]\s+publique|de\s+la\s+s[ée]curit[ée]\s+sociale|de\s+l['’]urbanisme|de\s+la\s+route|mon[ée]taire\s+et\s+financier|de\s+la\s+propri[ée]t[ée]\s+intellectuelle|de\s+l['’]environnement)|Loi\s+f[ée]d[ée]rale)\b
+anaphora_triggers:
+- - Conseil de prud'hommes
+  - Conseil
+- - Conseil de prud’hommes
+  - Conseil
+- - Tribunal judiciaire
+  - Tribunal
+- - Tribunal de commerce
+  - Tribunal
+- - Tribunal correctionnel
+  - Tribunal
+- - Cour d'appel
+  - Cour
+- - Cour d’appel
+  - Cour
+- - Cour de cassation
+  - Cour
+- - Cour administrative
+  - Cour

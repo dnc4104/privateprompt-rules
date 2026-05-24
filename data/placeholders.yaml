@@ -1,0 +1,81 @@
+schema_version: 1
+open: ‹
+close: ›
+id_alphabet: ABCDEFGHJKLMNPQRSTUVWXYZ23456789
+id_len: 4
+type_map:
+  EMAIL_ADDRESS: E
+  IBAN_CODE: ID
+  PHONE_NUMBER: TEL
+  DATE_TIME: D
+  MONEY: M
+  AHV: ID
+  UID_CHE: ID
+  CH_PASSPORT: ID
+  NIR_FR: ID
+  SIREN_FR: ID
+  SIRET_FR: ID
+  TVA_FR: ID
+  CNI_FR: ID
+  FR_PASSPORT: ID
+  RCS_FR: ID
+  BIC: ID
+  TOQUE: ID
+  PRO_REG_FR: ID
+  ORG_FORM: O
+  ORGANIZATION: O
+  CASE_REFERENCE: ID
+  LOCATION: L
+  person: P
+  organization: O
+  location: L
+  job_title: T
+  case_reference: ID
+  medical_condition: MED
+structured_types:
+- AHV
+- BIC
+- CASE_REFERENCE
+- CH_PASSPORT
+- CNI_FR
+- DATE_TIME
+- EMAIL_ADDRESS
+- FR_PASSPORT
+- IBAN_CODE
+- MONEY
+- NIR_FR
+- ORG_FORM
+- PHONE_NUMBER
+- PRO_REG_FR
+- RCS_FR
+- SIREN_FR
+- SIRET_FR
+- TOQUE
+- TVA_FR
+- UID_CHE
+gender_prefixes_m:
+- m.
+- 'monsieur '
+- 'herr '
+- mr.
+- 'mr '
+- 'sieur '
+gender_prefixes_f:
+- mme
+- 'madame '
+- 'frau '
+- mrs.
+- 'mrs '
+- ms.
+- 'mademoiselle '
+- 'mlle '
+skip_titles:
+- Maître
+- Maitre
+- Me
+- Dr
+- Dr.
+- Docteur
+- Prof
+- Prof.
+- Professeur

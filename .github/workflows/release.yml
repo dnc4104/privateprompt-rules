@@ -1,0 +1,154 @@
+# Signed release workflow for the privateprompt-rules public repo.
+#
+# Trigger: push a tag of the form `data-pack-vN`. The workflow:
+#   1. Recomputes manifest.json sha256 entries from the YAML source files
+#      (catches accidental commits that didn't rerun dump_data_pack).
+#   2. Packages data/ into pack.tar.gz.
+#   3. Ed25519-signs the manifest.json bytes with RECOGNIZER_SIGNING_KEY.
+#   4. Publishes a GitHub Release with pack.tar.gz, pack.tar.gz.sig (base64),
+#      and latest.json (the metadata the app fetches first).
+#
+# Setup:
+#   - Public repo Settings → Secrets → Actions → New repository secret:
+#       Name:  RECOGNIZER_SIGNING_KEY
+#       Value: <base64 private key from `cargo run --bin gen-keypair`>
+#   - Tag and push: `git tag data-pack-v1 && git push --tags`
+
+name: Release signed data pack
+
+on:
+  push:
+    tags:
+      - 'data-pack-v*'
+
+permissions:
+  contents: write   # needed to create the release + upload assets
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract version from tag
+        id: ver
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+          version="${tag#data-pack-v}"
+          if ! [[ "$version" =~ ^[0-9]+$ ]]; then
+            echo "::error::tag must be data-pack-vN where N is an integer, got $tag"
+            exit 1
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python (for manifest regeneration)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Recompute manifest sha256
+        # The repo ships data/ + a checked-in manifest.json. CI re-derives
+        # the hashes to defend against a stale manifest being released.
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+
+          root = Path("data")
+          files = sorted(
+              p for p in root.rglob("*")
+              if p.is_file() and p.name != "manifest.json"
+          )
+          manifest = {
+              "pack_version": int("${{ steps.ver.outputs.version }}"),
+              "schema_version": 1,  # bump when schema changes; app rejects mismatched
+              "files": [
+                  {
+                      "path": str(p.relative_to(root)).replace(os.sep, "/"),
+                      "sha256": hashlib.sha256(p.read_bytes()).hexdigest(),
+                  }
+                  for p in files
+              ],
+          }
+          (root / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+          print(f"Recomputed manifest with {len(files)} files")
+          PY
+
+      - name: Verify manifest matches committed (drift guard)
+        run: |
+          if ! git diff --quiet data/manifest.json; then
+            echo "::warning::manifest.json was stale — CI regenerated it."
+            echo "Run scripts/dump_data_pack.py locally and commit before tagging."
+          fi
+
+      - name: Build pack.tar.gz
+        run: |
+          cd data
+          tar -czf ../pack.tar.gz .
+          cd ..
+          ls -lh pack.tar.gz
+
+      - name: Sign manifest.json with Ed25519
+        env:
+          SIGNING_KEY_B64: ${{ secrets.RECOGNIZER_SIGNING_KEY }}
+        run: |
+          if [ -z "$SIGNING_KEY_B64" ]; then
+            echo "::error::RECOGNIZER_SIGNING_KEY secret not configured"
+            exit 1
+          fi
+          python3 -m pip install --quiet pynacl
+          python3 - <<'PY'
+          import base64, os
+          from nacl.signing import SigningKey
+
+          raw = base64.b64decode(os.environ["SIGNING_KEY_B64"])
+          if len(raw) != 32:
+              raise SystemExit(f"signing key must be 32 bytes, got {len(raw)}")
+          signer = SigningKey(raw)
+          manifest = open("data/manifest.json", "rb").read()
+          sig = signer.sign(manifest).signature  # detached 64-byte signature
+          # The Rust verifier reads base64 — keep it ASCII-safe.
+          open("pack.tar.gz.sig", "w").write(base64.b64encode(sig).decode() + "\n")
+          print(f"signed manifest.json ({len(manifest)}B → 64B sig)")
+          PY
+
+      - name: Build latest.json
+        run: |
+          owner_repo="${GITHUB_REPOSITORY}"
+          tag="${{ steps.ver.outputs.tag }}"
+          version="${{ steps.ver.outputs.version }}"
+          base="https://github.com/${owner_repo}/releases/download/${tag}"
+          published_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          cat > latest.json <<JSON
+          {
+            "pack_version": ${version},
+            "schema_version": 1,
+            "pack_url": "${base}/pack.tar.gz",
+            "manifest_sig_url": "${base}/pack.tar.gz.sig",
+            "published_at": "${published_at}"
+          }
+          JSON
+          cat latest.json
+
+      - name: Create release + upload assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.ver.outputs.tag }}
+          name: Data pack v${{ steps.ver.outputs.version }}
+          body: |
+            Signed recognition-rules data pack.
+
+            **Pack version:** ${{ steps.ver.outputs.version }}
+            **Schema version:** 1
+            **Signed by:** Ed25519 (public key in
+            [`src-tauri/src/data_pack_update.rs`](https://github.com/<APP_REPO>/blob/main/src-tauri/src/data_pack_update.rs))
+
+            Users update from the app's Settings → "Règles de reconnaissance" panel.
+          files: |
+            pack.tar.gz
+            pack.tar.gz.sig
+            latest.json
+          # Make `latest.json` reachable at the well-known
+          # /releases/latest/download/latest.json URL the app fetches.
+          make_latest: 'true'
