@@ -122,12 +122,17 @@ jobs:
           version="${{ steps.ver.outputs.version }}"
           base="https://github.com/${owner_repo}/releases/download/${tag}"
           published_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          # Content fingerprint — sha256 of the (CI-regenerated) manifest
+          # bytes. The app uses this to detect when its bundled pack is
+          # byte-identical to the latest release and skip the install.
+          manifest_sha256="$(shasum -a 256 data/manifest.json | awk '{print $1}')"
           cat > latest.json <<JSON
           {
             "pack_version": ${version},
             "schema_version": 1,
             "pack_url": "${base}/pack.tar.gz",
             "manifest_sig_url": "${base}/pack.tar.gz.sig",
+            "manifest_sha256": "${manifest_sha256}",
             "published_at": "${published_at}"
           }
           JSON
